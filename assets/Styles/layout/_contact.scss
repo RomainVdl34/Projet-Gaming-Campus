@@ -1,0 +1,123 @@
+.contact {
+    padding: 65px 0 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+
+    a {
+        text-decoration: none;
+        color: $color4;
+        &:hover {
+            color: rgb(180, 180, 1);
+        }
+    }
+
+    .contact-list{
+        display: flex;
+        justify-content: space-between;
+        font-weight: 400;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 80%;
+            height: 1px;
+            background: $color2;
+            bottom: -28px;
+        }
+
+        .list {
+            width: 24%;
+
+            #contact-img img {
+                display: block;
+                margin: 0 auto;
+            }
+
+            h5 {
+                text-transform: uppercase;
+                font-size: 1rem;
+                margin-bottom: 15px;
+            }
+
+            .infos-p li {
+                margin: 15px;
+            }
+
+            p {
+                line-height: 22px;
+                margin-bottom: 15px;
+            }
+
+            h6 {
+                font-size: 0.8rem;
+                margin-bottom: 8px;
+            }
+
+            .network {
+                margin: 20px 0 8px;
+            }
+
+            .footer-logos {
+
+                i {
+                    font-size: 0.8rem;
+                    margin: 0 12px 30px 0;
+                }
+            }
+
+            .copyright {
+                margin: 0;
+            }
+
+        //******************** MEDIA QUERIES ********************
+        @media screen and (max-width: 1050px) {
+            padding-left: 15px;
+    }
+        }
+    }
+
+    .contact-medias {
+        padding: 60px 0 15px;
+        display: flex;
+        align-items: center;
+        width: 80%;
+        margin: 0 auto;
+
+        .medias-text {
+            text-align: left;
+            width: 30%;
+
+            h3 {
+                text-transform: uppercase;
+                font-size: 0.9rem;
+                font-weight: 600;
+                margin-bottom: 12px;
+            }
+
+            p {
+                font-size: 0.8rem;
+                font-weight: 400;
+            }
+        }
+
+        .medias-logos {
+            width: 70%;
+            display: flex;
+            justify-content: space-around;
+
+            img {
+                width: 60px;
+
+                 //******************** MEDIA QUERIES ********************
+        @media screen and (max-width: 900px) {
+            width: 40px;
+    }
+            }
+        }
+    }
+
+    //******************** MEDIA QUERIES ********************
+    @media screen and (max-width: 750px) {
+        display: none;
+      }
+}

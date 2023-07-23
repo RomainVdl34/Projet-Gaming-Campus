@@ -1,0 +1,41 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url(../fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+$font1: "Montserrat", sans-serif;
+
+$color1: rgb(252, 252, 252);
+$color2: rgb(240, 240, 240);
+$color3: rgb(19, 19, 19);
+$color4: rgb(94, 4, 170);
+
+@mixin centerChild {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin threeChilds {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin activeButton {
+    background: $color4;
+    color: $color1;
+    border: none;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: $font1;
+    font-weight: 700;
+    color: $color3;
+}

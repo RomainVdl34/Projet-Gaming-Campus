@@ -1,0 +1,132 @@
+.news-part {
+  background: $color2;
+  padding: 100px 5px 30px;
+
+  .header-news {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 70% 30%;
+
+    .left-part {
+      h2 {
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+
+      p {
+        padding: 15px 0 0 0;
+        font-size: 0.9rem;
+      }
+
+      //******************** MEDIA QUERIES ********************
+      @media screen and (max-width: 750px) {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    }
+
+    .right-part {
+      @include centerChild;
+
+      button {
+        padding: 8px 30px;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 1px;
+        position: relative;
+        cursor: pointer;
+        transition: 0.3s ease;
+        &:hover {
+          background: $color3;
+          color: $color2;
+          transform: scale(1.05);
+        }
+        &:active {
+          @include activeButton;
+        }
+
+        i {
+          transform: translateX(10px);
+        }
+      }
+    }
+
+    //******************** MEDIA QUERIES ********************
+        @media screen and (max-width: 750px) {
+            display: block;
+        }
+  }
+
+  .main-news {
+    max-width: 1100px;
+    margin: 45px auto;
+
+    .main-news-container {
+      display: flex;
+      justify-content: space-between;
+
+      > div {
+        position: relative;
+        max-width: 23%;
+
+        .mn-pic img {
+          object-fit: cover;
+          width: 100%;
+          border-radius: 3px;
+          box-shadow: 0 2px 10px #888;
+
+          //******************** MEDIA QUERIES ********************
+        @media screen and (max-width: 750px) {
+            width: 50%;
+            display: block;
+            margin: 0 auto;
+        }
+        }
+
+        h4 {
+          margin: 15px 0;
+        }
+
+        p {
+          font-size: 0.8rem;
+          line-height: 20px;
+          margin-bottom: 45px;
+        }
+
+        a {
+          position: absolute;
+          bottom: 0;
+          text-transform: uppercase;
+          color: $color4;
+          font-size: 0.7rem;
+          letter-spacing: 1px;
+          font-weight: 700;
+          text-decoration: none;
+          transition: 0.2s ease;
+          &:hover {
+            color: rgb(180 180 1);
+          }
+
+          i {
+            transform: translateX(5px);
+          }
+        }
+        //******************** MEDIA QUERIES ********************
+        @media screen and (max-width: 750px) {
+          max-width: 90%;
+          margin: 0 auto;
+          padding-bottom: 15px;
+          margin-top: 58px;
+        }
+      }
+
+      //******************** MEDIA QUERIES ********************
+    @media screen and (max-width: 750px) {
+      display: block;
+    }
+    }
+  }
+}
